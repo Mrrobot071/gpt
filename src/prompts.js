@@ -1,4 +1,3 @@
-'''javascript
 const prompts = {
   // Prompt padrão do bot
   default: `Você é um assistente inteligente do WhatsApp chamado GeminiBot. 
@@ -75,4 +74,3 @@ module.exports = {
   getPromptByKeyword,
   commands
 };
-```
