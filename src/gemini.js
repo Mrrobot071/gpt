@@ -1,5 +1,3 @@
-
-```javascript
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 require('dotenv').config();
 
@@ -80,4 +78,3 @@ class GeminiService {
 }
 
 module.exports = GeminiService;
-```
