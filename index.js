@@ -1,4 +1,4 @@
-```javascript
+
 const WhatsAppBot = require('./src/bot');
 
 // Tratamento de erros não capturados
@@ -23,4 +23,3 @@ async function main() {
 }
 
 main();
-```
