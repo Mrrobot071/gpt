@@ -460,6 +460,32 @@ npm run dev
 2. Escaneie o QR Code com seu WhatsApp
 3. O bot estará pronto para uso!
 
+### Erros
+O aviso que você está vendo não é exatamente um erro, mas sim avisos de segurança que devem ser tratados. Aqui está como resolver:
+1. Execute o audit fix primeiro
+bashnpm audit fix
+Se isso não resolver todas as vulnerabilidades, tente:
+bashnpm audit fix --force
+2. Atualize o puppeteer (se necessário)
+O aviso sobre puppeteer deprecated pode ser resolvido atualizando para uma versão mais recente:
+bashnpm install puppeteer@latest
+3. Verifique se tudo está funcionando
+Depois das correções, verifique novamente:
+bashnpm audit
+4. Se ainda houver problemas, reinstale tudo
+Se os problemas persistirem, você pode limpar e reinstalar:
+bash# Remove node_modules e package-lock.json
+rmdir /s node_modules
+del package-lock.json
+
+# Reinstala tudo
+npm install
+5. Para projetos novos, use versões específicas
+Se você está começando um projeto novo, pode especificar versões mais recentes:
+bashnpm install whatsapp-web.js@latest @google/generative-ai@latest qrcode-terminal@latest dotenv@latest
+Dica importante
+Os avisos de vulnerabilidade são comuns em dependências de terceiros. O npm audit fix geralmente resolve a maioria deles automaticamente. Se algumas vulnerabilidades permanecerem, verifique se são realmente críticas para seu caso de uso específico.
+O seu projeto deve funcionar normalmente mesmo com esses avisos, mas é uma boa prática mantê-los resolvidos por questões de segurança.
 ### 9.2 - Comandos disponíveis:
 - `/help` - Mostra ajuda
 - `/clear` - Limpa histórico
