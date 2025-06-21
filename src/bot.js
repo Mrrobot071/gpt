@@ -1,4 +1,3 @@
-```javascript
 const { Client, LocalAuth } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 const GeminiService = require('./gemini');
@@ -152,4 +151,3 @@ class WhatsAppBot {
 }
 
 module.exports = WhatsAppBot;
-```
